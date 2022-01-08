@@ -12,12 +12,12 @@ fi
 ipaddr=$1
 subnet=$2
 
+sed -i -e "52i restrict $ipaddr mask $subnet nomodify notrap" ./ntp.conf
+
 echo "接続許可範囲に "
 echo "IPアドレス: " + $ipaddr
 echo "サブネットマスク: " + $subnet
 echo "を ./ntp.conf に設定しました"
-
-sed -i -e "52i restrict $ipaddr mask $subnet nomodify notrap" ./ntp.conf
 
 cp ./ntp.conf /etc/ntp.conf
 
