@@ -19,6 +19,8 @@ echo "を ./ntp.conf に設定しました"
 
 sed -i -e "52i restrict $ipaddr mask $subnet nomodify notrap" ./ntp.conf
 
+cp ./ntp.conf /etc/ntp.conf
+
 echo "接続許可範囲の設定が完了しました。NTPdを再起動します"
 
 systemctl restart ntp
