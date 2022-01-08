@@ -14,13 +14,17 @@ $ apt install -y ntpd
 NTPdをインストール
 
 ```
-$ chmod +x setup/sh
+$ git clone git@github.com:yu1k/ntp-config.git
+$ cd ./ntp-config/ntpd
+$ chmod +x setup.sh
 $ ./setup.sh [IPv4アドレス] [サブネットマスク]
 ```
 
-1行目で設定スクリプトに実行権限を与える
+1行目&2行目でローカルにリポジトリをクローンして `./ntp-config/ntpd` ディレクトリに移動する
 
-2行目で時刻同期の接続許可範囲のIPv4アドレス，サブネットマスクを引数として指定して設定スクリプトを実行する
+3行目で設定スクリプトに実行権限を与える
+
+4行目で時刻同期の接続許可範囲のIPv4アドレス，サブネットマスクを引数として指定して設定スクリプトを実行する
 
 ## TODO
 
