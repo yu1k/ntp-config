@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -ex
+set -eux
 
 # 引数はIPアドレスとサブネットの2個を指定する、それ以外が指定された場合は標準エラー出力を echo して exit 1 する
 if [ $# != 2 ]; then
